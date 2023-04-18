@@ -3,18 +3,75 @@ project:
   output-dir: docs
 
 website:
-  title: "Usman Afzali"
+  title: "Usman Afzali, PhD"
+  description: "Usman Afzali is a postdoc at University University, researching human flourishing and teaching neuroscience, methods & statistics."
+  favicon: "/files/favicon-512.png"
+  site-url: "https://www.usmanafzali.com"
+  repo-url: "https://github.com/andrewheiss/ath-quarto"
+  
+  twitter-card: 
+    image: "/files/profiles/twitter-card-large.png"
+    card-style: summary_large_image
+    creator: "@andrewheiss"
+    site: "@andrewheiss"
+    
+  open-graph: 
+    image: "/files/profiles/twitter-card-large.png"
+    locale: en_US
+  
   navbar:
+    pinned: true
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "About"
+        href: "index.qmd"
+      - text: "CV"
+        href: "cv/index.qmd"
+      - text: "Blog"
+        file: blog/index.qmd
+      - text: "Research"
+        file: research/index.qmd
+      - text: "Teaching"
+        href: "teaching/index.qmd"
+      - text: "Talks"
+        href: "talks/index.qmd"
+      - text: "Now"
+        href: now/index.qmd
+      - text: "Uses"
+        file: uses/index.qmd
+        
+    right:
+      - icon: envelope
+        aria-label: email
+        href: "mailto:usman.afzali@canterbury.ac.nz"
+      - icon: twitter
+        aria-label: twitter
+        href: https://twitter.com/UsmanAfzali
+      - icon: mastodon
+        aria-label: mastodon
+        href: https://mathstodon.xyz/@usman_afzali
+      - icon: github
+        aria-label: github
+        href: https://github.com/usman-afzali
+      - icon: linkedin
+        aria-label: linkedin
+        href: https://www.linkedin.com/in/usman-afzali
+        
+  page-footer:
+    left: |
+      <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Usman Afzali</span>
+    center: |
+      <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
+    right: |
+      <span class="faux-block">[View the source at {{< fa brands github >}} GitHub]({{< var github-url >}})</span>
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
-
-editor: visual
-
+    theme: 
+      - html/ath.scss
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
+    highlight-style: monokai

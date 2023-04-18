@@ -1,11 +1,76 @@
 ---
-title: "usmanafzali.com"
+title: "Welcome to my website!"
+pagetitle: "{{< meta website.title >}}"
+description-meta: "{{< meta website.description >}}"
+main-photo: /files/profiles/usman.jpeg
+main-photo-square: /files/profiles/andrew-heiss-2022-square.jpg
+title-block-banner: "orange"
+format:
+  html:
+    quarto-template-params:
+      banner-header-class: "home"
 ---
 
-This is a Quarto website.
+::: {.grid}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: {.g-col-12 .g-col-sm-4}
 
-```{r}
-1 + 1
+```{=html}
+<div class="grid" style="--bs-columns: 5; row-gap: 0;">
+  <div class="g-col-1 g-col-sm-0"></div>
+  <div class="g-col-3 g-col-sm-5">
+    <picture>
+      <source media="(max-width: 576px)" srcset="{{< meta main-photo-square >}}">
+      <source media="(min-width: 576px)" srcset="{{< meta main-photo >}}">
+      <img class="img-fluid" src="{{< meta main-photo >}}" alt="{{< meta author-meta >}}">
+    </picture>
+  </div>
+  <div class="g-col-1 g-col-sm-0"></div>
+</div>
 ```
+
+:::
+
+::: {.g-col-12 .g-col-sm-8}
+
+I am a postdoctoral research fellow and PI of [A national longitudinal study of Muslim diversity and flourishing](https://usman-afzali.github.io/nzavs-flourishing/), at [University of Canterbury](https://www.canterbury.ac.nz) in New Zealand. I completed my PhD in psychology from University of Canterbury in 2022.
+
+My training has been in cognitive psychology and in neuroscience - primarily focusing on memory suppression, and on using EEG brainwave data to detect criminal knowledge. In addition, I also conduct research in contemplative neuroscience attempting to examine neural signals (EEG) during contemplative practices. Furthermore, I conduct research in human flourishing - trying to discover predictors of flourishing and wellbeing in religious groups.
+
+I use experimental (behavioural as well as neuroscientific) and observational methods.
+
+Psychology fascinates me a great deal and my lifelong goal is to conduct good science and contribute to open science. Therefore, I am also actively involved in producing and sharing code via [GitHub](https://github.com/usman-afzali) using `RStudio` and `Quarto` (mainly `R`, but also `MATLAB` and `Python`).
+
+I am experienced in teaching statistics and research methods and my immediate goal is to become a permanent (tenure-track) lecturer in psychology.
+
+**Fields of Research**
+
+-   Human Flourishing
+-   Contemplative Neuroscience
+-   Cognitive Psychology: memory suppression
+-   Forensic Neuroscience
+
+**Current Projects**
+
+-   As `PI` and `postdoctoral research fellow` in [A national longitudinal study of Muslim diversity and flourishing](https://usman-afzali.github.io/nzavs-flourishing/)
+-   As PI in [Controlling unwanted memories: A multisite registered replication of the Think/No-Think effect](https://osf.io/nru4x/?view_only=bc189174a1cf4ca8b1dc83cf7967cd9e)
+-   As PI in Resting EEG microstates during contemplative practices
+
+**Current Courses**
+
+-   Postgraduate [Computational Contemplative-Neuroscience](https://www.canterbury.ac.nz/courseinfo/GetCourseDetails.aspx?course=PSYC480&occurrence=23S1(C)&year=2023)
+-   Undergraduate [Intermediate Research Methods and Statistics](https://www.canterbury.ac.nz/courseinfo/GetCourseDetails.aspx?course=PSYC344&occurrence=22S2(C)&year=2022). 
+
+
+**Awards**
+
+-   Georgina Carvell Memorial Prize
+-   University of Canterbury Doctoral Scholarship
+
+**Grants**
+
+-   A national longitudinal study of Muslim diversity and flourishing
+
+:::
+
+:::

@@ -1,9 +1,25 @@
----
-title: "About"
----
 
-About this site
+I am a postdoctoral research fellow and PI of A national longitudinal study of Muslim diversity and flourishing, based at University of Canterbury in New Zealand.
 
-```{r}
-1 + 1
-```
+My training has been in cognitive psychology and in neuroscience - primarily focusing on memory suppression, and on using EEG brainwave data to detect criminal knowledge. In addition, I also conduct research in contemplative neuroscience attempting to examine neural signals (EEG) during contemplative practices. Furthermore, I conduct research in human flourishing - trying to unearth predictors of flourishing and wellbeing in religious groups.
+
+I use experimental (behavioural as well as neuroscientific) and observational methods.
+
+Psychology fascinates me a great deal and my lifelong goal is to conduct good science and contribute to open science.
+
+I am experienced in teaching statistics and research methods and my immediate goal is to become a permanent (tenure-track) lecturer in psychology.
+
+Since the end of 2022, I have been using GitHub with RStudio and Quarto to learn, produce, and share code. Occasionally, I use Matlab too.
+
+Fields of Research
+Human Flourishing
+Contemplative Neuroscience
+Cognitive Psychology: memory suppression
+Forensic Neuroscience
+Current Projects
+As PI and postdoctoral research fellow in A national longitudinal study of Muslim diversity and flourishing
+As PI in Controlling unwanted memories: A multisite registered replication of the Think/No-Think effect
+As PI in Resting EEG microstates during contemplative practices
+Current Courses
+Postgraduate Computational Contemplative-Neuroscience
+Undergraduate Intermediate Research Methods and Statistics.
