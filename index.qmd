@@ -1,9 +1,9 @@
 ---
-title: "Welcome to my website!"
+title: "Hi there!"
 pagetitle: "{{< meta website.title >}}"
 description-meta: "{{< meta website.description >}}"
 main-photo: /files/profiles/usman.jpeg
-main-photo-square: /files/profiles/andrew-heiss-2022-square.jpg
+main-photo-square: /files/profiles/usman.jpeg
 title-block-banner: "orange"
 format:
   html:

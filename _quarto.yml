@@ -2,6 +2,11 @@ project:
   type: website
   output-dir: docs
 
+# Metadata stuff
+pagetitle: "{{< meta title >}} | {{< meta website.title >}}"
+description-meta: "{{< meta description >}}"
+author-meta: "Usman Afzali"  
+  
 website:
   title: "Usman Afzali, PhD"
   description: "Usman Afzali is a postdoc at University University, researching human flourishing and teaching neuroscience, methods & statistics."
@@ -38,6 +43,7 @@ website:
         href: now/index.qmd
       - text: "Uses"
         file: uses/index.qmd
+    background: "#FF941A"  
         
     right:
       - icon: envelope
@@ -59,10 +65,13 @@ website:
   page-footer:
     left: |
       <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Usman Afzali</span>
+      <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-sa >}} Creative Commons CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</span>
     center: |
       <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
     right: |
+      <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
       <span class="faux-block">[View the source at {{< fa brands github >}} GitHub]({{< var github-url >}})</span>
+    background: "#FF941A"
 
 format:
   html:
