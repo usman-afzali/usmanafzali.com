@@ -10,6 +10,8 @@ The Flourishing Lab has been established in Jan, 2023 at University of Canterbur
 
 The current project of the The Flourishing Lab is `A National Longitudinal Study of Muslim Diversity and Flourishing`. It is aimed to discover predictors of flourishing and resilience, and exploring diversity in New Zealand Mulsim community by conducting a longitudinal panel study in the context of the [New Zealand Attitudes and Values Study](https://www.psych.auckland.ac.nz/en/about/new-zealand-attitudes-and-values-study.html) (**NZAVS**).
 
+In the panel study, data are collected from the sampe participants overtime. 
+
 ### Project Summary
 
 NZAVS is a nationally representative panel study of New Zealanders that started in 2009. It is currently following `38,551` participants, almost 1% of the New Zealand's adult population. Over 20% of NZAVS survey items were developed with global virtue experts to specifically investigate the interplay of `religion`, `virtue`, and `flourishing` as people age. Despite strong NZAVS coverage of New Zealand's population, less than 0.5% of New Zealand's Muslims are currently participating in the study (n = 70). The proposed project will build on existing Muslim community partnerships to boost the NZAVS Muslim sample by `2,000` participants, thus enabling to explore Muslim flourishing longitudinally on a national level. 
