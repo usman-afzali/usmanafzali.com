@@ -2,14 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.usmanafzali.com/lab/index.html</loc>
-    <lastmod>2023-04-19T10:49:42.854Z</lastmod>
+    <lastmod>2023-04-19T12:28:37.692Z</lastmod>
   </url>
   <url>
     <loc>https://www.usmanafzali.com/index.html</loc>
-    <lastmod>2023-04-19T10:49:43.229Z</lastmod>
+    <lastmod>2023-04-19T12:28:38.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.usmanafzali.com/blog/2022/12/20/git-github-rstudio/index.html</loc>
+    <lastmod>2023-04-19T12:28:39.089Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.usmanafzali.com/blog/2022/12/22/basics-quarto-doc/index.html</loc>
+    <lastmod>2023-04-19T12:28:40.271Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.usmanafzali.com/blog/index.html</loc>
+    <lastmod>2023-04-19T12:28:40.704Z</lastmod>
   </url>
   <url>
     <loc>https://www.usmanafzali.com/cv/index.html</loc>
-    <lastmod>2023-04-19T10:49:44.955Z</lastmod>
+    <lastmod>2023-04-19T12:28:42.368Z</lastmod>
   </url>
 </urlset>

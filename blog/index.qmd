@@ -1,0 +1,94 @@
+---
+title: "Blog"
+author: ""
+description-meta: "{{< meta website.description >}}"
+listing:
+  - id: posts_2023
+    contents: "2023/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+    categories: true
+  - id: posts_2022
+    contents: "2022/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2021
+    contents: "2021/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2020
+    contents: "2020/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2019
+    contents: 
+      - "2019/**/index.qmd"
+      - "2019/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2018
+    contents: 
+      - "2018/**/index.qmd"
+      - "2018/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2017
+    contents: 
+      - "2017/**/index.qmd"
+      - "2017/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2016
+    contents: "2016/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+page-layout: full
+toc-title: Year
+toc-location: right
+date-format: "MMMM D, YYYY"
+code-tools: false
+comments: false
+---
+
+I have started using `Quarto` in December 2022. In this blog, I mainly share code as I learn and produce. Most of the code shall involve `documentation`, `statistics`, `slides`, and `version control`. I mainly use Quarto with `RStudio` on a MacBook. Please keep this in mind in case you are using a different machine.
+
+## 2023
+
+:::{#posts_2023}
+:::
+
+## 2022
+
+:::{#posts_2022}
+:::
+
+## 2021
+
+:::{#posts_2021}
+:::
+
+## 2020
+
+:::{#posts_2020}
+:::
+
+## 2019
+
+:::{#posts_2019}
+:::
+
+## 2018
+
+:::{#posts_2018}
+:::
+
+## 2017
+
+:::{#posts_2017}
+:::
+
+## 2016
+
+:::{#posts_2016}
+:::
+

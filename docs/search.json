@@ -14,6 +14,83 @@
     "text": "I am a postdoctoral research fellow and PI of A national longitudinal study of Muslim diversity and flourishing, at University of Canterbury in New Zealand. I completed my PhD in psychology from University of Canterbury in 2022.\nMy training has been in cognitive psychology and in neuroscience - primarily focusing on memory suppression, and on using EEG brainwave data to detect criminal knowledge. In addition, I also conduct research in contemplative neuroscience attempting to examine neural signals (EEG) during contemplative practices. Furthermore, I conduct research in human flourishing - trying to discover predictors of flourishing and wellbeing in religious groups.\nI use experimental (behavioural as well as neuroscientific) and observational methods.\nPsychology fascinates me a great deal and my lifelong goal is to conduct good science and contribute to open science. Therefore, I am also actively involved in producing and sharing code via GitHub using RStudio and Quarto (mainly R, but also MATLAB and Python).\nI am experienced in teaching statistics and research methods and my immediate goal is to become a permanent (tenure-track) lecturer in psychology.\nFields of Research\n\nHuman Flourishing\nContemplative Neuroscience\nCognitive Psychology: memory suppression\nForensic Neuroscience\n\nCurrent Projects\n\nAs PI and postdoctoral research fellow in A national longitudinal study of Muslim diversity and flourishing\nAs PI in Controlling unwanted memories: A multisite registered replication of the Think/No-Think effect\nAs PI in Resting EEG microstates during contemplative practices\n\nCurrent Courses\n\nPostgraduate Computational Contemplative-Neuroscience\nUndergraduate Intermediate Research Methods and Statistics.\n\nAwards\n\nGeorgina Carvell Memorial Prize\nUniversity of Canterbury Doctoral Scholarship\n\nGrants\n\nA national longitudinal study of Muslim diversity and flourishing"
   },
   {
+    "objectID": "blog/2022/12/20/git-github-rstudio/index.html",
+    "href": "blog/2022/12/20/git-github-rstudio/index.html",
+    "title": "Git and GitHub with RStudio On Mac",
+    "section": "",
+    "text": "There is a need to bring all resources that relate to Git and GitHub together because some of the available videos and links are outdated. In addition, online resources are either too long or they only address a small part of the bigger picture.\n\nInstalling Git on to Mac\nOpen Mac Terminal and install Homebrew by:\n\nCopy the “Install Homebrew” link from the website:\n\n\n\n\nFigure showing a screenshot of homebrew website\n\n\n\nPaste the link into the Mac terminal and press enter.\nTo ensure that homebrew is installed, type “brew –version”.\nInstall git by typing “brew install git”.\nCheck installation by typing “git –version”. It will show you the latest (current) version.\nIf you ever wanted to upgrade git, simply follow steps 4 and 5, and it will update and overwrite the previous version.\n\nNow you can close the Mac terminal and conduct the rest of processing from the RStudio terminal.\nNote. If you need help with creating an SSH key, visit here: Connecting to GitHub with SSH.\n\n\nFirst, create an RStudio project on your computer\nOnce created, then access it from the RStudio terminal using the following command - considering the folder is named Git-GitHub-2022, for example, on your Mac’s Desktop:\ncd ~/Desktop/Git-GitHub-2022\nIn RStudio, create a markdown document and name it “README.md”.\n\n\nCreate a repo on GitHub\nIt can be either public or private depending on your preference. Once created, it will show the following screen:\n\n\n\nFigure showing GitHub screen after repository creation\n\n\nRun the first line of the code - and the current README.md document will be replaced/overwritten in the directory (it only happens because I am adding these instructions and setting up the repo at the same time). Make sure you save the current markdown document (README.md) before running the first line of the code.\necho \"# Git-GitHub-Mac-2022\" >> README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main\ngit remote add origin git@github.com:usman-afzali/Git-GitHub-Mac-2022.git\ngit push -u origin main\nThen run the rest of the lines.\nYou will see the new README.md file has been added your GitHub environment/repository (repo). Now click the Git dialogue box on RStudio (see below) and tick all check boxes.\n\n\n\nFigure showing Git dialogue box on RStudio\n\n\nClick commit, type a commit message, click commit, close, and push. Refresh the GitHub screen and note that the new files have been added to the remote (GitHub) repository.\n\n\nGit clone\nUsed in case you lose access to the repo on the local machine. First, cd where you want the cloned repository to appear. Then follow the command below (e.g., if you are cloning the current repo).\ngit clone git@github.com:usman-afzali/Git-GitHub-Mac-2022.git\n\n\nSet up gitignore\nType names of all files inside the current directory that you don’t want to be pushed to the GitHub repo. They can be history files (that are already in gitignore), sensitive files, or maybe large files. In addition, add .DS_Store to gitingore too. The soon you change a file (any file), it will show up in the Git terminal on RStudio. And as the previous section, we add a commit message and push it to the remote GitHub repo.\n\n\nGit branching on local repo\nWhen git is created as above, it will only have a “main” branch. You can see this with the command:\ngit branch\nAll git processing, until now, happens in the “main” branch.\nA new branch (e.g., called “Rcode”) can be added onto the local git repo:\ngit branch Rcode\nNow, the “git branch” command will show you both branches, with the active branch showing a * before its name. To use the new branch, use:\ngit checkout Rcode\nNow, you can see that the active branch is “Rcode”. Any additions at this stage will be within the Rcode branch. Create a new file inside the new branch “sample-code-cars.R”. Once you commit, the newly created sample-code-cars.R file will not be pushed into GitHub remote repo. The file disappears when you switch branch.\nTo bring the new file into the main branch on remote repo, merge the “Rcode” branch into the main branch (you should be in the main branch to do so):\ngit merge Rcode\nThis is known as fast-forward merge. If you bring any new changes to the “Rcode” branch or sample-code-cars.R file on this branch, you need to merge again. These changes will not automatically merge into the main branch.\n\n\nDeleting and renaming a branch\nNeed to be outside a branch first. Then use:\ngit branch -d <branch name>\nTo rename, be inside that very branch. Then use:\ngit branch -m <branch name>\n\n\nUsing Git outside RStudio\nIf needed, you can use git outside RStudio too, using Mac terminal. For example, you want to use git on your Desktop for version control of a file. Opening terminal, you can access Desktop with\ncd ~/Desktop\nCreate a git repository:\nmkdir git-repo\nTo enter new repo:\ncd ~/Desktop/git-repo\nIf you check git status (below) in this directory, you will see the following message: “fatal: not a git repository (or any of the parent directories): .git”\ngit status\nIf you type “ls” in the terminal and hit return, you will see no content because it is an empty folder.\nUse the following command to initialize git:\ngit init\nNow that git has been initialized, you can see the hidden files within this folder by using:\nls -a\nGet inside .git folder\ncd ~/Desktop/git-repo/.git\nThen command ls and you will see all items inside.\nTo get out of each directory, use:\ncd ..\nFrom .git, it will take you two such steps (commands) to get back to the Desktop.\nIf at any stage, you want to know where you currently are located, use the following command and it will give you the directory address.\npwd\nFor instance, if you were in git-repo that you previously created, it will show you the following:\n\n\n\nterminal screenshot\n\n\nIf needed to show hidden files, the following commands, one after another, are to be used. Change yes to no to hide them again.\ndefaults write com.apple.Finder AppleShowAllFiles yes\nkillall Finder\n\n\nExtra\n\nUse “clear” to clean the terminal.\nIf you added a new file on GitHub, you can use the “pull” command from git dialogue box to bring that file to your local machine repository.\nA more sophisticated way - before the pull command - will be to use git fetch - that helps you see what the new additions are before pulling them to your local repo. Use:\n\ngit fetch origin\n…followed by git status. And you will see that the main branch is behind by 1 commit (related to the newly added file). The you can use the following to access the remote directory and see the newly added file(s):\ngit checkout origin/main\nIt will show you the file name. You can then access/see the new file in the local repo. The following command shows what is inside the new file:\ncat <filename.extension>\nOnce you are happy with the new file, you can checkout/switch to the local repo (main) and use pull to permanently bring the new file(s) in to the local repo. Besides the git dialogue box, you can also use the following command to pull the newly added file.\ngit pull origin main\n\nUse “git log” at any stage to see all of the commits.\n\n\n\nAdding a branch on GitHub (remote repo)\nA branch can be created on GitHub by typing a name in the window shown below after clicking on “main”:\n\n\n\nFig new branch on GitHub\n\n\nFor example, the new branch is called “pycode” within which a python file can be created, named “experimental.py”. When you fetch git, it tells you that we have a new branch: \nSwitch to the new remote repo:\ngit checkout origin/pycode\n… And access contents of the new file:\ncat experimental.py\nFinally, merge the new file as explained before. But you need to switch to the main branch first.\ngit checkout main\ngit merge origin/pycode\nOnce merged, there is no need to pull the file because now the new file has been merged into the local repo.\n\n\nReferences and further info:\n\nInstall Git on MacOS (Macbook M1, M1 Max, M1 Pro, M2) and push project into Github | Homebrew - YouTube video\nSee Fibonacci numbers with Git and GitHub - a GitHub repo. The video for this repo tutorial is available on YouTube: Intro to Git and GitHub with R and RStudio. The following references are also taken from the video above, if interested: 2a. Happy Git and GitHub for the useR - Website 2b. Git - The Simple Guide - Website 2c. Pro - Git - Website/Book 2d. Oh Shit, Git!?! - Website\nGit and GitHub Complete Guide - Free Udemy coures"
+  },
+  {
+    "objectID": "blog/2022/12/22/basics-quarto-doc/index.html",
+    "href": "blog/2022/12/22/basics-quarto-doc/index.html",
+    "title": "Basics of Quarto documentation",
+    "section": "",
+    "text": "Italic\nBold\nBold Italic\n\nList item 1\nList item 2\n\n\nbullet 1\nbullet 2\n\nLink: My website\n\ndf <- cars\ndf\n\n   speed dist\n1      4    2\n2      4   10\n3      7    4\n4      7   22\n5      8   16\n6      9   10\n7     10   18\n8     10   26\n9     10   34\n10    11   17\n11    11   28\n12    12   14\n13    12   20\n14    12   24\n15    12   28\n16    13   26\n17    13   34\n18    13   34\n19    13   46\n20    14   26\n21    14   36\n22    14   60\n23    14   80\n24    15   20\n25    15   26\n26    15   54\n27    16   32\n28    16   40\n29    17   32\n30    17   40\n31    17   50\n32    18   42\n33    18   56\n34    18   76\n35    18   84\n36    19   36\n37    19   46\n38    19   68\n39    20   32\n40    20   48\n41    20   52\n42    20   56\n43    20   64\n44    22   66\n45    23   54\n46    24   70\n47    24   92\n48    24   93\n49    24  120\n50    25   85\n\n\nTo run each line, say for testing, use command + return.\n\n\n\n\n\n\n\n\nplot(df$speed ~ df$dist)\n\n\n\n\nYou can also embed plots, for example: Here, echo=FALSE means that the code will not be shown.\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.\n\n\n\n\nimage(volcano, col = viridis(200, option = \"A\"))\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nTip with Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\nTo include a citation, simply select Citation from Insert menu in Visual editor. Quarto can create citations using a variety of options including Zotero, DOI, Crossref, etc, and creates a references.bib file as a result.\nFor instance: (Afzali et al. 2023)\n\n\n\n\nQuarto with RStudio\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\nMarkdown Basics"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "I have started using Quarto in December 2022. In this blog, I mainly share code as I learn and produce. Most of the code shall involve documentation, statistics, slides, and version control. I mainly use Quarto with RStudio on a MacBook. Please keep this in mind in case you are using a different machine."
+  },
+  {
+    "objectID": "blog/index.html#section",
+    "href": "blog/index.html#section",
+    "title": "Blog",
+    "section": "2023",
+    "text": "2023\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html#section-1",
+    "href": "blog/index.html#section-1",
+    "title": "Blog",
+    "section": "2022",
+    "text": "2022\n\n\n    \n                  \n            December 22, 2022\n        \n        \n            Basics of Quarto documentation\n            \n                \n                    writing\n                \n                \n                    markdown\n                \n                \n                    citations\n                \n                \n                    quarto\n                \n                \n                    zotero\n                \n            \n            Starting with Quarto and how to write a basic document\n        \n        \n            \n        \n    \n    \n                  \n            December 20, 2022\n        \n        \n            Git and GitHub with RStudio On Mac\n            \n                \n                    version control\n                \n                \n                    markdown\n                \n                \n                    git\n                \n                \n                    github\n                \n                \n                    quarto\n                \n                \n                    RStudio\n                \n                \n                    Mac\n                \n            \n            How to get started with version control on Mac\n        \n        \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html#section-2",
+    "href": "blog/index.html#section-2",
+    "title": "Blog",
+    "section": "2021",
+    "text": "2021\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html#section-3",
+    "href": "blog/index.html#section-3",
+    "title": "Blog",
+    "section": "2020",
+    "text": "2020\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html#section-4",
+    "href": "blog/index.html#section-4",
+    "title": "Blog",
+    "section": "2019",
+    "text": "2019\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html#section-5",
+    "href": "blog/index.html#section-5",
+    "title": "Blog",
+    "section": "2018",
+    "text": "2018\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html#section-6",
+    "href": "blog/index.html#section-6",
+    "title": "Blog",
+    "section": "2017",
+    "text": "2017\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html#section-7",
+    "href": "blog/index.html#section-7",
+    "title": "Blog",
+    "section": "2016",
+    "text": "2016\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "cv/index.html",
     "href": "cv/index.html",
     "title": "Curriculum vitæ",

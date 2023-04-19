@@ -34,7 +34,7 @@ website:
       - text: "Lab"
         href: "lab/index.qmd"
       - text: "Blog"
-        file: blog/index.qmd
+        file: "blog/index.qmd"
       - text: "Research"
         file: research/index.qmd
       - text: "Teaching"
